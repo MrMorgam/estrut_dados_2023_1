@@ -50,7 +50,7 @@ int calculaAlturaArvore(NoArv *raiz) {
 int main() {
     NoArv *raiz = criaArvore(1, criaArvore(2, criaArvoreVazia(), criaArvore(3, criaArvoreVazia(), criaArvoreVazia())), criaArvore(3, criaArvore(5, criaArvoreVazia(), criaArvoreVazia()), criaArvore(6, criaArvoreVazia(), criaArvore(6, criaArvoreVazia(), criaArvoreVazia()))));
     
-    cout << "Altura da árvore: " << calculaAlturaArvore(raiz);
+    cout << "A altura da árvore é " << calculaAlturaArvore(raiz) << endl;
 
     return 0;
 }

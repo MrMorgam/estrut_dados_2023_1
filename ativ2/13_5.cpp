@@ -52,7 +52,7 @@ int contaRepeticoesItem(NoArv *raiz, int Item) {
 int main() {
     NoArv *raiz = criaArvore(1, criaArvore(2, criaArvoreVazia(), criaArvore(3, criaArvoreVazia(), criaArvoreVazia())), criaArvore(3, criaArvore(5, criaArvoreVazia(), criaArvoreVazia()), criaArvore(6, criaArvoreVazia(), criaArvore(6, criaArvoreVazia(), criaArvoreVazia()))));
     
-    if (contaRepeticoesItem(raiz , 9)) {
+    if (contaRepeticoesItem(raiz , 7)) {
         cout << "Item está na arvore" << endl;
     } else {
         cout << "Item não está na arvore" << endl;

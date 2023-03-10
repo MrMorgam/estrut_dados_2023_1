@@ -46,7 +46,7 @@ void percorreArvoreEmNivel(NoArv* a){
         cout << ">";
 
     } else {
-        cout<<"<>";
+        cout << "<>";
     }
 }
 
@@ -55,6 +55,7 @@ int main() {
     NoArv *raiz = criaArvore(1, criaArvore(2, criaArvoreVazia(), criaArvore(3, criaArvoreVazia(), criaArvoreVazia())), criaArvore(3, criaArvore(5, criaArvoreVazia(), criaArvoreVazia()), criaArvore(6, criaArvoreVazia(), criaArvore(6, criaArvoreVazia(), criaArvoreVazia()))));    
     
     percorreArvoreEmNivel(raiz);
+    cout << endl;
 
     return 0;
 }
