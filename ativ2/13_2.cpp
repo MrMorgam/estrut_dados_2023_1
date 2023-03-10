@@ -37,18 +37,6 @@ int arvoreEstaVazia(NoArv* a) {
 }
 
 
-void percorreArvoreEmNivel(NoArv* a) {
-    if (!arvoreEstaVazia(a)) {
-        cout << "<" << a->info;
-        percorreArvoreEmNivel(a->esq);
-        percorreArvoreEmNivel(a->dir);
-        cout << ">";
-    } else {
-        cout<<"<>";
-    }
-}
-
-
 int contaNos(NoArv *raiz) {
     if(arvoreEstaVazia(raiz)) {
         return 0;
@@ -59,7 +47,7 @@ int contaNos(NoArv *raiz) {
 
 
 int main() {
-    NoArv *raiz = criaArvoere(1, criaArvoere(2,  criaArvoreVazia(), criaArvoere(3, criaArvoreVazia(), criaArvoreVazia())), criaArvoere(3, criaArvoere(5, criaArvoreVazia(), criaArvoreVazia()), criaArvoere(6, criaArvoreVazia(), criaArvoere(6, criaArvoreVazia(), criaArvoreVazia()))));
+    NoArv *raiz = criaArvore(1, criaArvore(2,  criaArvoreVazia(), criaArvore(3, criaArvoreVazia(), criaArvoreVazia())), criaArvore(3, criaArvore(5, criaArvoreVazia(), criaArvoreVazia()), criaArvore(6, criaArvoreVazia(), criaArvore(6, criaArvoreVazia(), criaArvoreVazia()))));
 
     int total = contaNos(raiz);
     

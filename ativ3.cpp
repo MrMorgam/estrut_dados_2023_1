@@ -36,25 +36,21 @@ int arvoreEstaVazia(NoArv* a) {
 }
 
 
-void percorreArvoreEmNivel(NoArv* a){
-    if (!arvoreEstaVazia(a)) {
-        cout << "<" << a->info;
-
-        percorreArvoreEmNivel(a->esq);
-        percorreArvoreEmNivel(a->dir);
-    
-        cout << ">";
-
-    } else {
-        cout<<"<>";
-    }
+int eb(NoArv* a) {
+    // função
 }
 
 
 int main() {
     NoArv *raiz = criaArvore(1, criaArvore(2, criaArvoreVazia(), criaArvore(3, criaArvoreVazia(), criaArvoreVazia())), criaArvore(3, criaArvore(5, criaArvoreVazia(), criaArvoreVazia()), criaArvore(6, criaArvoreVazia(), criaArvore(6, criaArvoreVazia(), criaArvoreVazia()))));    
     
-    percorreArvoreEmNivel(raiz);
+    int arv_eb = eb(raiz);
+
+    if (arv_eb == 1) {
+        cout << "A árvore é estritamente binária" << endl;
+    } else {
+        cout << "A árvore não é estritamente binária" << endl;
+    }
 
     return 0;
 }
